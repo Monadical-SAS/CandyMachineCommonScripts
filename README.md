@@ -9,9 +9,10 @@ You should take a look to [metaboss](https://metaboss.rs/overview.html) to under
 
 Use [snapshot mints](https://metaboss.rs/snapshot.html#snapshot-mints) for getting list of tokens to update, replace data.json for path to your generated file.
 
-## Token division structure 
+## Config file structure 
 
-You should follow this structure for each division of tokens
+You should add to this array as many divisions as you want. The sum of quantity can not be greater than your candy machine quantity. 
+Follow this structure for each division of tokens
 
 | Attribute | Description |
 | ------ | ------ |
@@ -23,18 +24,18 @@ You should follow this structure for each division of tokens
 
 ```
 {	
-		"name": TOKEN_NAME,
-		"quantity": QUANTITY_OF_SELECTED_TOKENS, 
+		"name": NFT_NAME,
+		"quantity": QUANTITY_OF_SELECTED_NFTS, 
 		"uri": ARWEAVE_METADATA_LINK,
 		"seller_fee_basis_points": SELLER_FEE_BASIS_POINTS,
 		"creators": [
 	    	{
-				"address": YOUR_CANDY_MACHINE_ID,
+				"address": YOUR_CANDY_MACHINE_CREATOR_ADDRESS,
 				"verified":True,
 				"share":0,
 			},
 	        {
-	            "address": CREATOR_ADDRESS_ID,
+	            "address": CREATOR_ADDRESS_ADDRESS,
 	            "verified": False,
 	            "share": 100
 	        }
@@ -46,7 +47,7 @@ The generated data follow this structure, check [here](https://metaboss.rs/updat
 
 ```
 {
-    "mint_account": "CQNKXw1rw2eWwi812Exk4cKUjKuomZ2156STGRyXd2Mp",
+    "mint_account": "MINT_ADDRESS",
     "nft_data":
     {
     "name": "FerrisCrab #4",
@@ -55,20 +56,15 @@ The generated data follow this structure, check [here](https://metaboss.rs/updat
     "seller_fee_basis_points": 100,
     "creators": [
         {
-            "address": "<YOUR_CANDY_MACHINE_ID>",
+            "address": "<YOUR_CANDY_MACHINE_CREATOR_ADDRESS>",
             "verified": true,
             "share": 0
         },
         {
-            "address": "<KEYPAIR_CREATOR>",
+            "address": "<CREATOR_ADDRESS>",
             "verified": true,
-            "share": 50
+            "share": 100
         },
-        {
-            "address": "42NevAWA6A8m9prDvZRUYReQmhNC3NtSZQNFUppPJDRB",
-            "verified": false,
-            "share": 50
-        }
     }
 }
 ```

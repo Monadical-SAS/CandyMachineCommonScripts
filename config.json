@@ -1,0 +1,38 @@
+[
+  {
+    "name": "<FIRST NFT NAME>",
+    "quantity": "<FIRST NFT QUANTITY>",
+    "uri": "<FIRST NFT ARWAVE URI>",
+    "seller_fee_basis_points": "<SELLER FEE BASE POINTS>",
+    "creators": [
+      {
+        "address": "<CANDY MACHINE CREATOR ADDRESS>",
+        "verified": true,
+        "share": 0
+      },
+      {
+        "address": "<NFT CREATOR ADDRESS>",
+        "verified": true,
+        "share": 100
+      }
+    ]
+  },
+  {
+    "name": "<SECOND NFT NAME>",
+    "quantity": "<SECOND NFT QUANTITY>",
+    "uri": "<SECOND NFT ARWAVE URI>",
+    "seller_fee_basis_points": "<SELLER FEE BASE POINTS>",
+    "creators": [
+      {
+        "address": "<CANDY MACHINE CREATOR ADDRESS>",
+        "verified": true,
+        "share": 0
+      },
+      {
+        "address": "<NFT CREATOR ADDRESS>",
+        "verified": true,
+        "share": 100
+      }
+    ]
+  }
+]

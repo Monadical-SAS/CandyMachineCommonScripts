@@ -5,6 +5,7 @@ import os
 
 # This should be the list returned by metaboss snapshot mints. (https://metaboss.rs/snapshot.html)
 f = open("data.json")
+token_division = json.load(open("config.json"))
 participants = set(json.load(f))
 
 # this is a list with division of the tokens, each element of the list must contain a
@@ -14,44 +15,6 @@ participants = set(json.load(f))
 # "uri": property that is an arweave link with the metadata what is going to be updated
 # "creators": list with values for each creator like: address, verify and share
 # you should change this values for your tokens e.g.
-token_division = [
-    {
-        "name": "Token 12",
-        "quantity": "12",
-        "uri": "https://arweave.net/KlQVZ2wiSuw1QT7RNeeLD903y5hNoipOOqC5NmOHPMY",
-        "seller_fee_basis_points": 0,
-        "creators": [
-            {
-                "address": "DfB7FF214VRCJxHgqAXx6uqaBGqMr8RoKHt3t5MFwgh1",
-                "verified": True,
-                "share": 0,
-            },
-            {
-                "address": "8xDHDA1pffkaNqYQs6p5KxdPNg9MpP72Fb6XJxjPrBE5",
-                "verified": False,
-                "share": 100,
-            },
-        ],
-    },
-    {
-        "name": "Token 10",
-        "quantity": "10",
-        "uri": "https://arweave.net/XUwnnHggswzJ6ROgGSEx9fHVYEGjNGIGS2fZ3SyBjco",
-        "seller_fee_basis_points": 0,
-        "creators": [
-            {
-                "address": "DfB7FF214VRCJxHgqAXx6uqaBGqMr8RoKHt3t5MFwgh1",
-                "verified": True,
-                "share": 0,
-            },
-            {
-                "address": "8xDHDA1pffkaNqYQs6p5KxdPNg9MpP72Fb6XJxjPrBE5",
-                "verified": False,
-                "share": 100,
-            },
-        ],
-    },
-]
 
 for element in token_division:
 
