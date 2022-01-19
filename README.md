@@ -50,21 +50,22 @@ The generated data follow this structure, check [here](https://metaboss.rs/updat
     "mint_account": "MINT_ADDRESS",
     "nft_data":
     {
-    "name": "FerrisCrab #4",
-    "symbol": "FERRIS",
-    "uri": "https://arweave.net/N36gZYJ6PEH8OE11i0MppIbPG4VXKV4iuQw1zaq3rls",
-    "seller_fee_basis_points": 100,
-    "creators": [
-        {
-            "address": "<YOUR_CANDY_MACHINE_CREATOR_ADDRESS>",
-            "verified": true,
-            "share": 0
-        },
-        {
-            "address": "<CREATOR_ADDRESS>",
-            "verified": true,
-            "share": 100
-        },
+        "name": NFT_NAME,
+        "symbol": "",
+        "uri": ARWEAVE_METADATA_LINK,
+        "seller_fee_basis_points": SELLER_FEE_BASIS_POINTS,
+        "creators": [
+            {
+                "address": "<YOUR_CANDY_MACHINE_CREATOR_ADDRESS>",
+                "verified": true,
+                "share": 0
+            },
+            {
+                "address": "<CREATOR_ADDRESS>",
+                "verified": true,
+                "share": 100
+            },
+        ]
     }
 }
 ```
